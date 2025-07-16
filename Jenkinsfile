@@ -45,11 +45,14 @@ pipeline {
         }
     }
     post {
+        always {
+            cleanWs()
+        }
         success {
-            emailext attachLog: true, body: 'Build succeeded', subject: 'Build Success', to: 'nguyenduccongminh34@gmail.com'
+            echo 'Pipeline completed successfully!'
         }
         failure {
-            emailext attachLog: true, body: 'Build failed', subject: 'Build Failure', to: 'nguyenduccongminh34@gmail.com'
+            echo 'Pipeline failed!'
         }
     }
 }
