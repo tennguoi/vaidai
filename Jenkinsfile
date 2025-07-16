@@ -46,10 +46,10 @@ pipeline {
     }
     post {
         success {
-            emailext attachLog: true, body: 'Build succeeded', subject: 'Build Success', to: 'your-email@example.com'
+            emailext attachLog: true, body: 'Build succeeded', subject: 'Build Success', to: 'nguyenduccongminh34@gmail.com'
         }
         failure {
-            emailext attachLog: true, body: 'Build failed', subject: 'Build Failure', to: 'your-email@example.com'
+            emailext attachLog: true, body: 'Build failed', subject: 'Build Failure', to: 'nguyenduccongminh34@gmail.com'
         }
     }
 }
